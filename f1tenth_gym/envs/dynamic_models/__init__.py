@@ -142,7 +142,7 @@ _BASE_PARAMETER_COUNT = 18
 _MB_PARAMETER_COUNT = len(_ALL_PARAMETER_FIELDS)
 
 F1TENTH_VEHICLE_PARAMETERS = VehicleParameters(
-    mu=1.0489,
+    mu=0.5,
     C_Sf=4.718,
     C_Sr=5.4562,
     lf=0.15875,
