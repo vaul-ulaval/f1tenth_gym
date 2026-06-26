@@ -115,6 +115,8 @@ class Track:
         """
         with open(filespec, "r") as yaml_stream:
             map_metadata = yaml.safe_load(yaml_stream)
+            known_fields = {f.name for f in TrackSpec.__dataclass_fields__.values()}
+            map_metadata = {k: v for k, v in map_metadata.items() if k in known_fields}
             track_spec = TrackSpec(name=track, **map_metadata)
         return track_spec
 
